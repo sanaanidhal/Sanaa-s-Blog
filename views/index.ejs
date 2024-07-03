@@ -1,6 +1,6 @@
 <div class="author">
-    <h1 class="author__heading">Hi, I am Raddy.</h1>
-    <p class="author__body">Web developer and content creator.</p>
+    <h1 class="author__heading">Hi, I am Nidhal.</h1>
+    <p class="author__body">Engineering Student and Web developer.</p>
   </div>
   
   <img src="/img/hero-image.webp" alt="person looking out through window" class="hero-image" width="981" height="528">
@@ -9,12 +9,19 @@
     <h2 class="articles__heading">Latest Posts</h2>
   
     <ul class="article-ul">
+
+
+      <% data.forEach(post => { %>
+       
      <li>
         <a href="a">
-            <span>Post Title</span>
-            <span class="article-list__data">Date</span>
+            <span><%= post.title %></span>
+            <span class="article-list__data"><%= post.createdAt %></span>
         </a>
      </li>
+     
+     <% }) %>
+
   </ul>
   <a href="a" class="pagination">&lt; View Older Posts</a>
   
